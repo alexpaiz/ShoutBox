@@ -1,0 +1,84 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family:arial;
+	font-size:15px;
+	line-height:1.5em;
+	background:#f4f4f4;
+	
+}
+
+#container{
+	
+	background:#333333;
+	margin: 50px auto;
+	overflow: auto;
+	width:60%;
+	min-height: 400px;
+}
+
+header h1{
+	color:#ffffff;
+	font-size:22px; 
+	padding:15px 0 10px 10px;
+	border-bottom: 1px solid #ffffff;
+}
+
+#shouts{
+/*	This width means 90% of parent div (which is container)*/
+	width:90%; 
+	background: #f4f4f4;
+	height: 400px;
+	margin:20px auto;/* 20 pixels for top and bottom and auto for left and right*/
+	overflow:auto; /* this lets you see the overflow of data using a scrollbar if the shouts are out of the div*/
+}
+
+.shouts{/* Use the dot (.) because this was defined as a class*/
+	list-style: none;
+	padding:8px;
+	border-bottom: 1px #cccccc dotted;
+}
+
+.shouts span{ /* change color for time */
+	color: #C9C9C9;
+}
+
+
+#input{
+	width: 90%;
+	min-height: 80px;
+	margin: auto;
+	padding: 0;
+}
+
+#input input[type='text']{ /* use [type = text] so that we don't change the submit button*/
+	height:25px; /* height of text boxes*/
+	width: 48%;
+	padding: 3px;
+	margin-bottom: 0px;
+	border: #666666 solid 1px;
+}
+
+#input .shout-btn{
+	padding: 5px;
+	margin-bottom: 0px;
+	width: 100%;
+	margin: 20px auto;
+}
+
+.error{
+	background: red;
+	color:#ffffff;
+	padding:5px;
+	margin-bottom: 20px;
+}
+
+/* This is a media query, this was added to stretch the input boxes if they are separated one above the other as in tablet screens*/
+@media only screen and (max-width:768px){ 
+	#input input[type='text']{
+		width: 98%;
+	}
+}
